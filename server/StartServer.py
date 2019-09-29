@@ -119,8 +119,8 @@ print('Bind Ready...')
 print('Listening...')
 s.listen(1)
 
-thread.start_new_thread(StartConnection)
-thread.start_new_thread(Timer)
+thread.start_new_thread(StartConnection,())
+thread.start_new_thread(Timer,())
 while 1:
     cmd = input("CMD:")
     if(cmd == 'quit'):
