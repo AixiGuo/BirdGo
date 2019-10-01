@@ -62,6 +62,7 @@ app.post('/CMD', function (req, res) {
             pack[fields[i]] = split[i + 1]
         }
         writer.write(pack)
+        pack = {}
         pack.ACK = true
         res.send(pack)
         return
