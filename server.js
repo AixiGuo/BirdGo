@@ -4,7 +4,10 @@ var app = express();
 var bodyParser = require("body-parser");
 var path = require('path');
 var fs = require('fs');
-var csvWriter = require('csv-write-stream')
+var csvWriter = require('csv-write-stream') 
+var csv = require('csv-parser');
+var filename = 'Reports.csv'
+
 
 //SETTING
 app.use(express.static(path.join(__dirname, './')));
@@ -14,6 +17,8 @@ app.set('views', __dirname);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/'));
+
+
 //start listen port 1200
 app.listen(port, function () {
     console.log("server runs on port " + port);
@@ -41,7 +46,7 @@ app.post('/CMD', function (req, res) {
     if (cmd == 'Report') {
 
         var fields = ['Name', 'Latitude', 'Longtitude', 'Possibility', 'Time'];
-        var filename = 'Reports.csv'
+    
         if (!fs.existsSync(filename))
             writer = csvWriter({ headers: fields });
         else
@@ -63,6 +68,23 @@ app.post('/CMD', function (req, res) {
 
     }
 
-    res.send(pack)
+    if(cmd=='Fetch'){
+        buf = []
+        fs.createReadStream(filename)
+        .pipe(csv())
+        .on('data', (row) => {
+            buf.push(row)
+            console.log(row);
+        })
+        .on('end', (dat) => {
+            console.log('CSV file successfully processed');
+            console.log(buf) 
 
-}) 
+            pack.dat = buf
+            pack.ACK = true
+            res.send(pack)
+        });
+    }
+
+})
+ 

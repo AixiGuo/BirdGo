@@ -1,3 +1,7 @@
 #CmdInput #Data{
     width:500px
 }
+
+#Content{
+    white-space: pre-line
+}
