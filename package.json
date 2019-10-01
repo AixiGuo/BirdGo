@@ -51,8 +51,11 @@
 		"test": "grunt"
 	},
 	"dependencies": {
+		"csv-write-stream": "^2.0.0",
 		"ejs": "^2.7.1",
-		"express": "^4.17.1"
+		"express": "^4.17.1",
+		"fs": "0.0.1-security",
+		"json2csv": "^4.5.3"
 	},
 	"devDependencies": {
 		"commitplease": "2.3.0",
