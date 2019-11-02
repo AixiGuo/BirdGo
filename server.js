@@ -13,8 +13,9 @@ var filename = 'Reports.csv'
 
 //SETTING
 app.use(express.static(path.join(__dirname, './'))); 
-app.use(express.static(path.join(__dirname, './','CSS'))); 
-app.use(express.static(path.join(__dirname,  'CSS'))); 
+app.use(express.static(path.join(__dirname, './','CSS/'))); 
+app.use(express.static(path.join(__dirname,  'CSS/')));
+console.log(path.join(__dirname,  'CSS/')) ;
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname);
