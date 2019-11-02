@@ -3,10 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>jQuery UI Example Page</title>
+    <title>Bird Go Server Page</title>
     <link href="CSS/jquery-ui.css" rel="stylesheet">
     <link href="CSS/mypage.css" rel="stylesheet">
     <link  href="CSS/theme.default.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
 </head>
 
 <body>
@@ -17,23 +23,33 @@
     <div>
             <input id="CmdInput"> 
         </div>
-    <div>
-
+    <div> 
         <button id="Submit">Submit</button>
+        <button id="Fetch">Fetch</button>
+        <button id="Debug">Debug</button>
     </div>
 
+    <div id="mapid">
+    </div>
+
+<div id = 'label'>
+<h3> Bird Species</h3>
+    <div id="text">
+    </div>
+</div>
+
+<h3> Database</h3>
 <div id ="Content">
     <table id="myTable" class="tablesorter">
          
       </table>
 </div>
 
-    
     <script type="text/javascript" src="external/jquery/jquery.js"></script>
     <script type="text/javascript" src="jquery.tablesorter.js"></script> 
     <script src="jquery-ui.js"></script> 
     <script src="jquery.jsontotable.js"></script>
-    <script src="mypage.js"></script>
+    <script src="mypage.js"></script> 
  
 </body>
 
