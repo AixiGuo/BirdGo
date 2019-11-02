@@ -5,8 +5,10 @@
 #Content{
     white-space: pre-line
 }
-#mapid { height: 768px; 
-width: 1024px;}
+#mapid { 
+    height: 768px; 
+    width: 1024px;
+}
 
 #label{
     position:absolute;
