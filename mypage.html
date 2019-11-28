@@ -7,19 +7,31 @@
     <link href="CSS/jquery-ui.css" rel="stylesheet">
     <link href="CSS/mypage2.css" rel="stylesheet">
     <link href="CSS/theme.default.css" rel="stylesheet">
-    <link href="CSS/leaflet.css" rel="stylesheet" >
-    <script src="leaflet.js" ></script>
+    <link href="CSS/leaflet.css" rel="stylesheet">
+    <script src="leaflet.js"></script>
 </head>
 
 <body>
+    <div class="QRCODE" style="left: 500pt;top:75pt">
+        <a href="http://172.245.118.139:1200/BirdGo.apk" ">
+            <font size="6" style="vertical-align: text-top;">Download BirdGo :</font>
+        </a>
+    </div>
+    <div class="QRCODE">
+        <a href="http://172.245.118.139:1200/BirdGo.apk" ">
+    <font size=" 4" style="vertical-align: text-top;">Download BirdGo</font>
 
+            <img src="images/QR.png" href="http://172.245.118.139:1200/BirdGo.apk"></img></a>
+
+    </div>
     <h1>Welcome to BirdGO!</h1>
     <h2>This is server page</h2>
 
+
     <div>
-            <input id="CmdInput"> 
-        </div>
-    <div> 
+        <input id="CmdInput">
+    </div>
+    <div>
         <button id="Submit">Submit</button>
         <button id="Fetch">Fetch</button>
         <button id="Debug">Debug</button>
@@ -28,25 +40,25 @@
     <div id="mapid">
     </div>
 
-<div id = 'label'>
-<h3> Bird Species</h3>
-    <div id="text">
+    <div id='label'>
+        <h3> Bird Species</h3>
+        <div id="text">
+        </div>
     </div>
-</div>
 
-<h3> Database</h3>
-<div id ="Content">
-    <table id="myTable" class="tablesorter">
-         
-      </table>
-</div>
+    <h3> Database</h3>
+    <div id="Content">
+        <table id="myTable" class="tablesorter">
+
+        </table>
+    </div>
 
     <script type="text/javascript" src="external/jquery/jquery.js"></script>
-    <script type="text/javascript" src="jquery.tablesorter.js"></script> 
-    <script src="jquery-ui.js"></script> 
+    <script type="text/javascript" src="jquery.tablesorter.js"></script>
+    <script src="jquery-ui.js"></script>
     <script src="jquery.jsontotable.js"></script>
-    <script src="mypage.js"></script> 
- 
+    <script src="mypage.js"></script>
+
 </body>
 
 </html>

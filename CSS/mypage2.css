@@ -19,3 +19,9 @@
 #CmdInput{
     width: 450px;
 }
+
+.QRCODE{
+    position: absolute;
+      left: 800px;
+      top:0px;
+}

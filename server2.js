@@ -12,13 +12,17 @@ var filename = 'Reports copy.csv'
 
 
 //SETTING
-app.use(express.static(path.join(__dirname, './')));
+app.use(express.static(path.join(__dirname, './'))); 
+app.use(express.static(path.join(__dirname, './','CSS/'))); 
+app.use(express.static(path.join(__dirname,  'CSS/')));
+console.log(path.join(__dirname,  'CSS/')) ;
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/')); 
+app.use(express.static(__dirname + '/CSS/')); 
 
 
 //start listen port 1200
